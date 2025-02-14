@@ -1430,6 +1430,20 @@ label {
     opacity: 0;
 }
 
+.form__button.primary-button {
+    animation: none;
+}
+
+section-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.section.open .section-content {
+    max-height: 500px;
+}
+
 .animation.active {
     opacity: 1;
     transition: all 0.3s ease 0s;
@@ -2685,11 +2699,12 @@ footer {
         width: 100%;
         left: 0;
         z-index: -1;
-        top: 97px;
+        top: 89px;
         display: none;
 
         &.active {
             display: flex;
+            animation: none;
         }
     }
 
